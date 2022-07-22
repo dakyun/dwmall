@@ -87,6 +87,9 @@ html,body{
 	padding:0 14px;
 }
 
+#wrap{
+	overflow: hidden;
+}
 /* color */
 :root{
 	--dw-blue:#00AEFF;

@@ -59,7 +59,7 @@
             </section>
 
             <section class="product-banner">
-                <div class="page-tab">
+                <div id="page-tab">
                     <ul>
                         <li class="active"><a href="#">상세페이지</a></li>
                         <li><a href="#">리뷰작성안내</a></li>
@@ -106,13 +106,13 @@
                     </div>
                 </article>
                 <article>
-                    <span id="tab1" tabindex="0" class="section-title" aria-controls="panel1" role="tab">
+                    <span id="tab1" tabindex="0" class="section-title open" aria-controls="panel1" role="tab">
                         <h3>응모방법 안내</h3>
                         <span class="material-symbols-outlined arrow-up">
                             keyboard_arrow_up
                             </span>
                     </span>
-                    <div class="collapsing-section" id="panel1" aria-labelledby="tab1" role="tabpanel" style="display:none">
+                    <div class="collapsing-section" id="panel1" aria-labelledby="tab1" role="tabpanel" style="display:block">
                        <img src="../images/event-howto.jpg" alt="">
                        <span class="layer-line"></span>
                     </div>
@@ -162,25 +162,28 @@
 
             <section class="reward-banner inner">
                 <ul>
+                    <!-- 이미지 바꿀 예정 -->
                     <li><img src="../images/reward-banner.jpg" alt=""></li>
                     <li><img src="../images/reward-banner.jpg" alt=""></li>
                 </ul>
             </section>
 
-            <section class="join-board inner">
-                <h3>체험단 응모 게시판</h3>
-
-                <!-- 응모 참여 버튼 -->
-                <a href="#" class="join-btn"><span class="material-symbols-rounded">how_to_vote</span>응모 참여하기</a>
-                <!-- 응모 완료 -->
-                <span class="join-complete"><span class="material-symbols-rounded">
-                    check_circle</span>응모 완료</span>
-                <!-- 응모 마감 -->
-                <span class="join-over"><span class="material-symbols-rounded">
-                    timer</span>응모 마감</span>
-
+            <section class="join-board">
+                <div class="inner">
+                    <h3>체험단 응모 게시판</h3>
+                    <!-- 응모 참여 버튼 -->
+                    <a href="#" class="join-btn"><span class="material-symbols-rounded">how_to_vote</span>응모 참여하기</a>
+                    <!-- 응모 완료 -->
+                    <span class="join-complete"><span class="material-symbols-rounded">
+                        check_circle</span>응모 완료</span>
+                    <!-- 응모 마감 -->
+                    <span class="join-over"><span class="material-symbols-rounded">
+                        timer</span>응모 마감</span>
+                </div>
+                
+                <!-- 팝업 -->
                 <div class="popup-wrap" id="popup">
-                    <div class="popup" style="display:block;">
+                    <div class="popup">
                         <div class="popup-head">
                             <span class="head-title">체험단 응모를 위해<br><span class="blue-bold">사용자 등록</span>을 먼저 해주세요!</span>
                         </div>
@@ -199,7 +202,14 @@
                     </div>
                 </div>
 
-                <div class="reply-top">
+                <!-- 체험단 참여하기 팝업 후 댓글 입력 input -->
+                <div class="reply-reg inner">
+                    <label for="">댓글 입력하기 <span>(500자 이하)</span></label>
+                    <textarea type="text" placeholder="체험하고 싶은 이유와 개인 SNS 또는 블로그 주소를 필히 작성해주세요."></textarea>
+                    <div class="cf"><a href="#" class="reg-btn fr">등록</a></div>
+                </div>
+
+                <div class="reply-top inner">
                     <p>댓글 <span>총 <span class="reply-num">138</span>개</span></p>
                     <div class="toggle-box">
                         <span>내 댓글 보기</span>
@@ -213,70 +223,101 @@
                         </div>
                     </div>
                 </div>
-                <div class="reply-top-fn">
-                    <a class="fn-on" href="#">최신순</a>
-                    <a href="#">등록순</a>
-                </div>
-
                 <div class="reply-container">
+                    <!-- 내 댓글 삭제 하기 가장 첫번째거에 있음 -->
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
+                            <!-- 내 댓글일 때 아래 span 2개가 추가됌 -->
+                            <span class="reply-mine">내 댓글</span>
+                            <span class="reply-delete material-symbols-outlined">delete</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-date">2022.07.15</span>
                             <span class="reply-name">김동원</span>
+                            <span class="reply-date">2022.07.15</span>
                         </div>
-                        <p class="reply-text">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                        <div class="reply-main cf">
+                            <p class="reply-text fl">https://www.instagram.com/sysy_1215 육퇴하고 늘 와인 한 잔 하는데 ~ 맛있는 참치 카나페 만들어 먹으면 행복할 것 같아요</p>
+                            <span class="fr material-symbols-outlined">expand_more</span>
+                        </div>
                     </div>
                 </div>
-
+                <div class="pager-box">
+                    <a href="#" class="prev"><span class="material-symbols-rounded">chevron_left</span></a>
+                    <a href="#" class="page-on">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#" class="next"><span class="material-symbols-rounded">chevron_right</span</a>
+                </div>
             </section>
         </main>
         <!-- //main -->
