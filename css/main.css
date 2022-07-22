@@ -513,7 +513,7 @@
     display:flex;
     border-top:1px solid #f0f0f0;
     background-color:#f4f8fa;
-    box-shadow:1px 0 6px rgba(168, 168, 168, 0.22);
+    box-shadow:1px 0 6px rgba(168, 168, 168, 0.32);
     z-index:212;
     justify-content:space-evenly;
 }

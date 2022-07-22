@@ -32,7 +32,7 @@
   display:block;
 }
 .period-box{
-  margin:12px 0 24px;
+  margin:1.5rem 0 ;
 }
 .period-box ul{
   display:flex;
@@ -111,16 +111,19 @@
 }
 #page-tab ul{
   display:flex;
-  height:100%;
+  height:50px;
   align-items:center;
   justify-content:space-between;
+  width:100%;
+  background-color:#ffffff;
+  transition: all .2s;
 }
 #page-tab ul li{
   width:33.1111%;
   height:50px;
   text-align:center;
   line-height:50px;
-  background-color:#e5e5e5;
+  background-color:#e1f5ff;
   font-size:15px;
 }
 #page-tab ul li a{
@@ -133,15 +136,17 @@
   color:#ffffff;
 }
 
-#page-tab>ul.top-fix {
+#page-tab>ul.fix-top{
+  box-shadow:0 5px 6px rgba(99, 99, 99, 0.1);
   position:fixed;
   top:50px;
   left:0;
   z-index:1111;
+  transition: all .2s;
 }
 /* review-wirte */
 .review-write{
-  margin:2em 0;
+  margin:2em 0 .1em;
   text-align:center;
 }
 .review-write>h3{
@@ -155,9 +160,7 @@
 }
 .review-example{
   background-color:#f9f9f9;
-  border-radius:8px;
-  padding:1.2rem;
-  margin:0 14px;
+  padding:2rem 1.2rem;
 }
 .review-example h5{
   font-weight:600;
@@ -243,7 +246,7 @@
 
 /* Accordian headers */
 .section-title{
-	background: #f7f7f7;
+	background: #ebebeb;
 	display: flex;
 	padding:14px 14px;
   justify-content:space-between;
@@ -426,7 +429,7 @@ span.section-title.open >span.arrow-up{
   margin-top:2em;
   position: relative;
   display:flex;
-  gap:36%;
+  gap:38%;
 }
 .reply-top>p{
   font-size:17px;
@@ -444,7 +447,6 @@ span.section-title.open >span.arrow-up{
   color:#555555;
   font-weight:400;
 }
-.button-cover,
 .knobs,
 .layer {
   position: absolute;
@@ -455,9 +457,9 @@ span.section-title.open >span.arrow-up{
 }
 
 .button {
-  position: relative;
+  position: absolute;
   top: 100%;
-  right:-42%;
+  right:1rem;
   width: 42px;
   height: 20px;
   margin: -20px auto 0 auto;
@@ -534,28 +536,42 @@ span.section-title.open >span.arrow-up{
 /* reply-reg */
 .reply-reg{
   margin:1rem 0 2rem;
+  position:relative;
 }
 .reply-reg>label{
   font-weight:500;
   display:inline-block;
-  margin-bottom:.5rem;
 }
-.reply-reg>label>span{
-  font-size:13px;
-  color:#666666;
-}
-.reply-reg>textarea{
-  width:95%;
-  height:100px;
-  padding:.5rem;
+.reply-reg .text-wrap{
   border:1px solid #dbdbdb;
+  width:100%;
+  margin:.5rem 0;
+}
+.reply-reg textarea{
+  width:95%;
+  height:150px;
+  padding:.5rem;
+  border:none;
   font-family:"Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   resize: none;
+  font-size:15px;
+}
+.reply-reg .write-cnt{
+  display:block;
+  width:95%;
+  height:12px;
+  background-color:#ffffff;
+  color:#888888;
+  font-size:13px;
+  text-align:right;
+  padding:.4rem;
+  padding-right:0;
 }
 .reply-reg .reg-btn{
-  padding:.5rem 1.2rem;
-  background-color:#444444;
-  color:#ffffff;
+  padding:.6rem 1.6rem;
+  background-color:#ffffff;
+  color:var(--dw-blue);
+  border:1px solid var(--dw-blue);
   border-radius:4px;
   font-size:15px;
   text-align:center;
@@ -564,7 +580,7 @@ span.section-title.open >span.arrow-up{
 
 /* reply-box */
 .reply-box{
-  padding:.8rem 14px 0;
+  padding:1rem 14px 0;
   position:relative;
   transition:all .2s ease-in-out;
 }
@@ -576,6 +592,7 @@ span.section-title.open >span.arrow-up{
 }
 .reply-box .reply-info .reply-name{
   font-weight:500;
+  color:#555555;
 }
 .reply-box:nth-of-type(1){
   padding:0 14px;
@@ -644,10 +661,11 @@ span.section-title.open >span.arrow-up{
 .reply-box.show-all span.material-symbols-outlined{
   transform:rotate(180deg);
   transition:all .2s ease-in-out;
+  color:#555555;
 }
 .reply-box.show-all{
   background-color:#f8f8f8;
-  padding:.8rem 14px 0;
+  padding:1rem 14px 0;
   transition:all .2s ease-in-out;
 }
 .reply-box:nth-of-type(1).show-all{
@@ -657,20 +675,23 @@ span.section-title.open >span.arrow-up{
 
 .reply-mine{
   font-size:12px;
-  padding:2px 5px;
+  padding:4px 8px;
   border-radius:30px;
-  border:1px solid #48BDF3;
+  background-color:var(--dw-orange);
   display:inline-block;
-  color:var(--dw-blue);
+  color:#ffffff;
+  opacity:.6;
   margin-left:.5rem;
+  font-weight:300;
 }
 .reply-delete{
   font-size:20px;
   padding:.5rem;
   display:inline-block;
   position:absolute;
-  right:0;
+  right:-5px;
   top:-10px;
+  z-index:21;
 }
 .reply-box.show-all span.material-symbols-outlined.reply-delete{
   transform:rotate(0deg);

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,200,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,200,0,0" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
@@ -61,18 +61,19 @@
             <section class="product-banner">
                 <div id="page-tab">
                     <ul>
-                        <li class="active"><a href="#">상세페이지</a></li>
-                        <li><a href="#">리뷰작성안내</a></li>
-                        <li><a href="#">응모방법안내</a></li>
+                        <li class="active"><a href="#main-banner">상세페이지</a></li>
+                        <li><a href="#review-notice">세부안내사항</a></li>
+                        <li><a href="#join">응모게시판</a></li>
                     </ul>
                 </div>
-                <div class="main-banner" style="background-color:#999999; padding:400px 0"></div>
+                <div id="main-banner" style="background-color:#999999; padding:400px 0"></div>
             </section>
             
-            <div class="review-write">
+            <div id="review-notice" class="review-write">
                 <h3>체험 리뷰 작성 안내</h3>
                 <div class="review-step"><img src="../images/review-step.jpg" alt=""></div>
-                <div class="review-example inner">
+                <div class="review-example">
+                    <div class="bg-grey"></div>
                     <div class="ex01">
                         <h5>SNS / 블로그 리뷰 작성 문구 및 해시태그 TIP</h5>
                         <button type="button" id="data-copy1" class="data-copy1">위 상품을 소개하면서 동원몰로부터 <br> 상품을 무료로 제공받았습니다.  </button>
@@ -168,17 +169,17 @@
                 </ul>
             </section>
 
-            <section class="join-board">
+            <section id="join" class="join-board">
                 <div class="inner">
                     <h3>체험단 응모 게시판</h3>
                     <!-- 응모 참여 버튼 -->
-                    <a href="#" class="join-btn"><span class="material-symbols-rounded">how_to_vote</span>응모 참여하기</a>
+                    <!-- <a href="#" class="join-btn"><span class="material-symbols-rounded">how_to_vote</span>응모 참여하기</a> -->
                     <!-- 응모 완료 -->
-                    <span class="join-complete"><span class="material-symbols-rounded">
-                        check_circle</span>응모 완료</span>
+                    <!-- <span class="join-complete"><span class="material-symbols-rounded">
+                        check_circle</span>응모 완료</span> -->
                     <!-- 응모 마감 -->
-                    <span class="join-over"><span class="material-symbols-rounded">
-                        timer</span>응모 마감</span>
+                    <!-- <span class="join-over"><span class="material-symbols-rounded">
+                        timer</span>응모 마감</span> -->
                 </div>
                 
                 <!-- 팝업 -->
@@ -204,8 +205,11 @@
 
                 <!-- 체험단 참여하기 팝업 후 댓글 입력 input -->
                 <div class="reply-reg inner">
-                    <label for="">댓글 입력하기 <span>(500자 이하)</span></label>
-                    <textarea type="text" placeholder="체험하고 싶은 이유와 개인 SNS 또는 블로그 주소를 필히 작성해주세요."></textarea>
+                    <label for="">댓글 입력하기</label>
+                    <div class="text-wrap">
+                        <textarea type="text" placeholder="체험하고 싶은 이유와 개인 SNS 또는 블로그 주소를 반드시 작성해주세요."></textarea>
+                        <span class="write-cnt">0 / 500자</span>
+                    </div>
                     <div class="cf"><a href="#" class="reg-btn fr">등록</a></div>
                 </div>
 
@@ -227,10 +231,10 @@
                     <!-- 내 댓글 삭제 하기 가장 첫번째거에 있음 -->
                     <div class="reply-box">
                         <div class="reply-info">
-                            <span class="reply-name">김동원</span>
+                            <span class="reply-name">김동원<span class="reply-mine">MY</span></span>
                             <span class="reply-date">2022.07.15</span>
                             <!-- 내 댓글일 때 아래 span 2개가 추가됌 -->
-                            <span class="reply-mine">내 댓글</span>
+                            
                             <span class="reply-delete material-symbols-outlined">delete</span>
                         </div>
                         <div class="reply-main cf">
@@ -386,9 +390,8 @@
     </div>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
     <script src="../js/swiper2.js"></script>
-    <script src="../js/main.js"></script>
     <!-- second.js 추가 -->
     <script src="../js/second.js"></script>
     <script src="../js/copy.js"></script>

@@ -42,28 +42,53 @@ else { $(this).addClass('show-all'); }
 
 })
 
-// sticky-header
-// $(document).ready(function(){
+//top-btn
+const btt = $("#back-to-top");
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 150) {
+    btt.addClass("visible");
+  } else {
+    btt.removeClass("visible");
+  }
+});
+btt.click(function (e) {
+  e.preventDefault();
+  $("html,body").animate({ scrollTop: 0 }, 400);
+});
 
-//   $(window).scroll(function(){
-//       var bottom_menu = $("#page-tab").offset().top;
-//       console.log(bottom_menu);
-//       var docScrollY = $(document).scrollTop();
-//       var barThis = $("#page-tab")
-//       if( docScrollY >= 400 ) {
-//           barThis.addClass("top-fix");
-//       }else{
-//           barThis.removeClass("top-fix");
-//       }
-//   });
-// });
-const pageTab = $("#page-tab>ul").offset().top;
-console.log(pageTab)
+// sticky-header
+
+const pageTab = $("#page-tab").offset().top;
+console.log(pageTab);
+var speed = 270;
+// 360*780에서 top:685
 
 $(window).scroll(function () {
-  if ($(window).scrollTop() > pageTab) {
+  if ($(window).scrollTop() > 685) {
     $('#page-tab>ul').addClass("fix-top");
   } else {
     $('#page-tab>ul').removeClass("fix-top");
-  } 
+  }
+  let scrollTop = $(window).scrollTop();
+  if (scrollTop >= $("#main-banner").offset().top - speed) {
+    $("#page-tab>ul>li")
+      .eq(0)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+  }
+  if (scrollTop >= $("#review-notice").offset().top - speed) {
+    $("#page-tab>ul>li")
+      .eq(1)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+  }
+  if (scrollTop >= $("#join").offset().top - speed) {
+    $("#page-tab>ul>li")
+      .eq(2)
+      .addClass("active")
+      .siblings()
+      .removeClass("active");
+  }
 });
