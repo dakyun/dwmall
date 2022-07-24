@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,200,1,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,200,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/second.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/px-to-vw.css">
 </head>
 </head>
 <body>
@@ -173,7 +176,7 @@
                 <div class="inner">
                     <h3>체험단 응모 게시판</h3>
                     <!-- 응모 참여 버튼 -->
-                    <!-- <a href="#" class="join-btn"><span class="material-symbols-rounded">how_to_vote</span>응모 참여하기</a> -->
+                    <a href="#" class="join-btn"><span class="material-symbols-rounded">how_to_vote</span>응모 참여하기</a>
                     <!-- 응모 완료 -->
                     <!-- <span class="join-complete"><span class="material-symbols-rounded">
                         check_circle</span>응모 완료</span> -->
@@ -204,10 +207,10 @@
                 </div>
 
                 <!-- 체험단 참여하기 팝업 후 댓글 입력 input -->
-                <div class="reply-reg inner">
+                <div class="reply-reg inner" style="display:none;">
                     <label for="">댓글 입력하기</label>
                     <div class="text-wrap">
-                        <textarea type="text" placeholder="체험하고 싶은 이유와 개인 SNS 또는 블로그 주소를 반드시 작성해주세요."></textarea>
+                        <textarea type="text" placeholder="체험하고 싶은 이유와 개인 SNS 또는 블로그 주소를 함께 작성해주세요."></textarea>
                         <span class="write-cnt">0 / 500자</span>
                     </div>
                     <div class="cf"><a href="#" class="reg-btn fr">등록</a></div>
@@ -375,8 +378,8 @@
             <p class="footer-row-05">
                 Copyright 2021 Dongwon Dear Food Co.Ltd. <br> All Rights Reserved.
             </p>
-            <a id="back-to-top" href="#header" class="top"><span class="hidden">탑버튼</span><span class=" topbtn material-symbols-rounded">
-                expand_less</span></a>
+            <!-- 20220725 수정 -->
+            <a id="back-to-top" href="#header" class="top"><span class="hidden">탑버튼</span><span class="topbtn material-symbols-rounded">arrow_upward</span></a>
         </footer>
         <aside class="bottom-tab">
             <section class="bottom-menu">

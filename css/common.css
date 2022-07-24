@@ -52,10 +52,10 @@ a{
 	color:#333333;
 	text-decoration:none;
 	display:block;
-	letter-spacing:-.2px;
+	letter-spacing:-.0.069vw;
 }
 p,span{
-	letter-spacing:-.2px;
+	letter-spacing:-.0.069vw;
 }
 img{
 	width:100%;
@@ -84,7 +84,7 @@ html,body{
 	display:block;
 }
 .inner{
-	padding:0 14px;
+	padding:0 3.889vw;
 }
 
 #wrap{
