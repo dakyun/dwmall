@@ -658,9 +658,13 @@ span.section-title.open >span.arrow-up{
   display:none;
   transition:all .2s;
 }
+/* 20220725 css 추가 */
+.reply-box span.material-symbols-outlined{
+  transition:all .1s ease-in-out;
+}
 .reply-box.show-all span.material-symbols-outlined{
   transform:rotate(180deg);
-  transition:all .2s ease-in-out;
+  transition:all .1s ease-in-out;
   color:#555555;
 }
 .reply-box.show-all{

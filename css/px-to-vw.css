@@ -280,11 +280,12 @@
 }
 .review-example h5{
     font-size:4.167vw;
+    margin-bottom:1.6rem;
 }
 .review-example .ex01 button{
     border-radius:13.889vw;
     font-size:3.711vw;
-    width:72.222vw;
+    width:80vw;
     height:13.333vw;
 }
 .review-example .ex01 button::after,.review-example .ex02 button::after{
@@ -303,7 +304,7 @@
 .review-example .ex02 button{
     border-radius:13.889vw;
     font-size:3.889vw;
-    width:50vw;
+    width:60vw;
     height:10vw;
 }
 .ex02>span{
