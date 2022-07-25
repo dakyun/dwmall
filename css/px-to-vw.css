@@ -420,9 +420,9 @@
 .reply-box .reply-info{
     font-size: 3.889vw;
 }
-.reply-box:nth-of-type(1){
+/* .reply-box:nth-of-type(1){
     padding:0 3.889vw;
-}
+} */
 .reply-text{
     font-size:3.889vw;
     color:#333333;
@@ -430,9 +430,9 @@
 .reply-box.show-all{
     padding:1rem 3.889vw 0;
 }
-.reply-box:nth-of-type(1).show-all{
+/* .reply-box:nth-of-type(1).show-all{
     padding:0 3.889vw;
-}
+} */
 .reply-mine{
     font-size:3.333vw;
     padding:1.111vw 2.222vw;
