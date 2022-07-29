@@ -70,10 +70,53 @@
                         <li><a href="#join">응모게시판</a></li>
                     </ul>
                 </div>
-                <div id="main-banner" style="background-color:#999999; padding:400px 0"></div>
+                <div id="main-banner" class="section">
+                    <div class="section1"><img src="../images/detail-src/section1.jpg" alt=""></div>
+                    <div class="section2">
+                        <ul class="section2-slider">
+                            <li><img src="../images/detail-src/tunape01.jpg" alt=""></li>
+                            <li><img src="../images/detail-src/tunape02.jpg" alt=""></li>
+                            <li><img src="../images/detail-src/tunape03.jpg" alt=""></li>
+                            <li><img src="../images/detail-src/tunape04.jpg" alt=""></li>
+                        </ul>
+                        <img src="../images/detail-src/section2.png" alt="">
+                    </div>
+                    <div class="section3">
+                        <div class="section3-typo visual"><img class="show-up" src="../images/detail-src/section3-main-typo.png" alt=""></div>
+                        <div class="section3-box">
+                            <div class="section3-text1 inner visual">
+                                <img class="show-up" src="../images/detail-src/section3-img01.png" alt="">
+                                <p class="show-up delay">식감이 살아있는 옥수수콘이 들어 간 <span class="bold">고소마요</span> 맛!</p>
+                                <p class="show-up delay-1">마요네즈의 풍미와 아삭함이 끝내주는걸?</p>
+                                <p class="show-up delay-2">그건 무슨 맛이야?</p>
+                            </div>
+                            <div class="section3-text2 inner visual">
+                                <img class="show-up" src="../images/detail-src/section3-img02.png" alt="">
+                                <p class="show-up delay">이건 토마토 페이스트가 인상적인 <span class="bold">매콤마요</span> 맛!</p>
+                                <p class="show-up delay-1">매콤해서 계속 손이 가는 그런 맛이랄까?!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section4">
+                        <div class="point1 visual">
+                            <img class="show-up" src="../images/detail-src/point01-typo.png" alt="">
+                            <img class="show-up delay" src="../images/detail-src/canape.gif" alt="">
+                            <img class="show-up delay-1" src="../images/detail-src/point01-text.png" alt="">
+                        </div>
+                        <div class="point2 visual">
+                            <img class="show-up" src="../images/detail-src/point02.jpg" alt="">
+                        </div>
+                        <div class="point3 visual">
+                            <img class="show-up" src="../images/detail-src/point03.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="section5 visual">
+                        <img class="show-up" src="../images/detail-src/section4.jpg" alt="">
+                    </div>
+                </div>
             </section>
             
-            <div id="review-notice" class="review-write">
+            <div id="review-notice" class="review-write section">
                 <h3>체험 리뷰 작성 안내</h3>
                 <div class="review-step"><img src="../images/review-step.jpg" alt=""></div>
                 <div class="review-example">
@@ -173,7 +216,7 @@
                 </ul>
             </section>
 
-            <section id="join" class="join-board">
+            <section id="join" class="join-board section">
                 <div class="inner">
                     <h3>체험단 응모 게시판</h3>
                     <!-- 응모 참여 버튼 -->
@@ -214,7 +257,8 @@
                         <textarea type="text" placeholder="체험하고 싶은 이유와 개인 SNS 또는 블로그 주소를 함께 작성해주세요."></textarea>
                         <span class="write-cnt">0 / 500자</span>
                     </div>
-                    <div class="cf"><a href="#" class="reg-btn fr">등록</a></div>
+                    <!-- 20220727 css 수정 -->
+                    <div class="cf"><a href="#" class="reg-btn">등록하기</a></div>
                 </div>
 
                 <div class="reply-top inner">
@@ -393,11 +437,12 @@
         </aside>
     </div>
     <script src='https://code.jquery.com/jquery-3.6.0.min.js'></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.1/swiper-bundle.min.js"></script>
     <script src="../js/swiper2.js"></script>
     <!-- second.js 추가 -->
     <script src="../js/second.js"></script>
     <script src="../js/copy.js"></script>
+    <script src="../js/slick.js"></script>
 </body>
 </html>

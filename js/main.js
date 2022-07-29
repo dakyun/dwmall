@@ -41,9 +41,7 @@ btt.click(function (e) {
 });
 
 // event-tab
-const tabmenu = $("main>.event-tab>ul>li");
 const tab = $("main>.event-tab>ul")
-const sections = $(".section");
 const speed = 200;
 
 $(window).scroll(function () {
@@ -108,4 +106,17 @@ function hasScrolled() {
     }
     
     lastScrollTop = st;
-}
+};
+
+const topmenu = $(".event-tab li");
+const headerHeight = $('.header-top').height()+10;
+const tabHeight = $('.event-tab').height()+10;
+
+topmenu.click(function (e) {
+  e.preventDefault();
+  let target = $(this);
+  let index = target.index();
+  let section = $(".section").eq(index);
+  let offset = section.offset().top;
+  $("html,body").animate({ scrollTop: offset-headerHeight-tabHeight }, 500);
+});
