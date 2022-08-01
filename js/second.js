@@ -131,10 +131,10 @@ topmenu.click(function (e) {
   $("html,body").animate({ scrollTop: offset-headerHeight-tabHeight }, 500);
 });
 
+//스크롤 애니메이션
 const visual = $(".visual")
 const speed2 = 500
 
-//스크롤 애니메이션
 $(window).on('scroll', function(){
   let scrollTop = $(window).scrollTop()
   visual.each(function(i){

@@ -420,9 +420,7 @@
 .reply-box .reply-info{
     font-size: 3.889vw;
 }
-/* .reply-box:nth-of-type(1){
-    padding:0 3.889vw;
-} */
+
 .reply-text{
     font-size:3.889vw;
     color:#333333;
@@ -430,9 +428,6 @@
 .reply-box.show-all{
     padding:1rem 3.889vw 0;
 }
-/* .reply-box:nth-of-type(1).show-all{
-    padding:0 3.889vw;
-} */
 .reply-mine{
     font-size:3.333vw;
     padding:1.111vw 2.222vw;
@@ -458,9 +453,6 @@
 
 
 /* footer */
-footer{
-    margin-top:50px;
-}
 #back-to-top{
     width:13.333vw;
     height:13.333vw;
@@ -471,12 +463,11 @@ footer{
     font-weight:200;
     color:#fafafa;
 }
-.footer-nav-01{
-    padding:5.556vw 0;
+
+/* css 추가 */
+.join-board{
+    padding-top:10vw;
 }
-
-
-/* 20220727 css 추가 */
 .reply-reg textarea{
     color:#444444;
  }
@@ -582,7 +573,7 @@ footer{
     width:53%;
 }
 .section4 .point1 img:nth-of-type(2){
-    width:80%;
+    width:85%;
     border-radius: 50%;
     margin:10vw 0;
 }
@@ -590,7 +581,10 @@ footer{
     width:82%;
     margin-bottom:17vw;
 }
-/* 스크롤이벤트 */
+
+
+
+/* 스크롤 css */
 .show-up{
     opacity:0;
 }
@@ -601,19 +595,19 @@ footer{
     animation-delay:1.3s;
 }
 .show-up.active.delay-1{
-    animation-delay:1.9s;
+    animation-delay:1.8s;
 }
 .show-up.active.delay-2{
-    animation-delay:2.5s;
+    animation-delay:2.3s;
 }
 .show-up.active.delay-3{
-    animation-delay:3.1s;
+    animation-delay:2.8s;
 }
 .show-up.active.delay-4{
-    animation-delay:3.7s;
+    animation-delay:3.3s;
 }
 .show-up.active.delay-5{
-    animation-delay:4.3s;
+    animation-delay:3.8s;
 }
 
 

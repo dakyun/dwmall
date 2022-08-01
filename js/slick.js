@@ -4,7 +4,7 @@ $('ul.section2-slider').slick({
     arrows:false,
     dots:false,
     autoplay:true,
-    autoplaySpeed:1500,
+    autoplaySpeed:1000,
     infinite:true,
     fade:true,
 });
